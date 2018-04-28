@@ -9,10 +9,11 @@
 <body>
   <script type="text/javascript">
     var gandalf = {
-      "real name": "Gandalf",
+      realName: "Gandalf",
       "age (est)": 11000,
       "race": "Maia",
       "haveRetirementPlan": true,
+      designation: "Wizard",
       "aliases": [
         "Greyhame",
         "Stormcrow",
@@ -23,7 +24,7 @@
     };
 
     // Object properties can be accessed with "bracket notation"
-    alert("My name is " + gandalf["real name"]);
+    alert("My name is " + gandalf.realName);
 
     // Or with "dot notation" if the property has no spaces
     if (gandalf.haveRetirementPlan) {
@@ -38,7 +39,7 @@
     alert("I have more than " + gandalf.aliases.length + " aliases");
 
     // Non-existent properties return undefined
-    alert("My designation is " + gandalf["designation"]);
+    alert("My designation is " + gandalf.designation);
   </script>
 </body>
 

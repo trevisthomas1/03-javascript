@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        var car = {
+            make: "Honda",
+            model: "Fit",
+            color: "Blue Raspberry",
+            mileage: 3000,
+            isWorking: true,
+
+            driveToWork: function () {
+
+                alert("Old Mileage: " + car.mileage);
+
+                car.mileage = car.mileage + 8;
+
+                alert("New mileage: " + car.mileage);
+            },
+
+            driveAroundWorld: function () {
+
+                alert("Old Mileage: " + car.mileage);
+
+                car.mileage = car.mileage + 24000;
+
+                alert("New Mileage: " + car.mileage);
+                alert("Car needs a tuneup!");
+
+                car.isWorking = false;
+            },
+
+            getTuneUp: function () {
+                alert("Car is ready to go!");
+                car.isWorking = true;
+            },
+
+            honk: function () {
+                alert("Honk! Honk!");
+            }
+        };
+
+        function reWriteStats() {
+            console.log("Make: " + car.make);
+            console.log("Model: " + car.model);
+            console.log("Color:" + car.color);
+            console.log("Mileage: " + car.mileage);
+            console.log("Is Working: " + car.isWorking);
+            console.log("------------------------------");
+        }
+
+
+
+        document.onkeyup = function (event) {
+
+            var letter = event.key.toLowerCase();
+
+            if (letter === "h") {
+                car.honk();
+                rewriteStats();
+            }
+            else if (letter === "d") {
+                car.driveToWork();
+                rewriteStats();
+            }
+            else if (letter === "w") {
+                car.driveAroundWorld();
+                rewriteStats();
+            }
+            else if (letter === "t") {
+                car.getTuneUp();
+                rewriteStats();
+            }
+            else {
+                document.write("You need to type the right letter!")
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>

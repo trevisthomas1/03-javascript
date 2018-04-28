@@ -8,7 +8,7 @@
 
     <h1>Open the console to see the magic!</h1>
 
-    <script>
+    <script type="text/javascript">
 
       // FUNCTIONS
       // ================================================================================
@@ -16,18 +16,78 @@
       // Create a Function called "adder" that take three arguments (x, y, z).
       // The function should add the arguments together, and log the result to the console.
 
+                      // function adder(x,y,z) {
+                      //   var i;
+                      //   var sum = 0;
+                      //   for (i = 0; i < arguments.length; i++) {
+                      //     sum += arguments[i];
+                      //   }
+                      //   return sum;
+                      // }
+                      
+                      
+                      
+                      // console.log(adder(5, 10, 15));
 
+      function adder(x, y, z) {
+        console.log(x + y + z);
+      }
+
+      adder(38, 27, 21);
+
+      //-------------------------------------//
+
+      function adder(x, y, z) {
+          var sum = 0
+          sum =  x + y + z
+          console.log(sum);
+        }
+
+        adder(38, 27, 21);
+      
       // Create a Function called "multiplier" that takes three arguments (x, y, z).
       // The function should multiply the arguments, and log the result to the console.
 
+      function multiplier(x, y, z) {
+          var multiply = 0
+          multiply = x * y * z
+          console.log(multiply);
+        }
+  
+        multiplier(2, 3, 4);
 
       // Create a Function called "isString" that takes three arguments (x, y, z).
       // "isString" determines if all three arguments are strings and logs an appropriate response to the console.
 
+      function isString(x, y, z) {
+
+            if (typeof x === 'string' && typeof y === 'string' && typeof z === 'string') {
+              console.log("Yep, they are strings");
+            } else {
+              console.log("Nope, not strings");
+
+            }
+        }
+
+        isString("Donovan", "For", "ROY");
+          
 
       // Create a Function called "vowelChecker" that takes in a single argument (x).
       // "vowlChecker" logs whether or not the input is a vowel.
+      
+      function vowelChecker(x) {
+          var firstChar = x.toLowerCase().charAt(0);
 
+          if(firstChar === 'a' || firstChar === 'e' || firstChar === 'i' || firstChar === 'o' || firstChar === 'u' || firstChar === 'y') {
+            console.log(firstChar.toUpperCase() + " is a vowel!")
+          } else {
+            console.log(firstChar.toUpperCase() + " is not a vowel, yo.")
+          }
+        }
+
+        vowelChecker("Apples and Oranges");
+
+        vowelChecker("Hello World");
 
       // BONUS
       // Creates a version of "adder" that returns its result. Function is called "adderReturn".
