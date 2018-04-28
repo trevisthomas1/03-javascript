@@ -3,37 +3,57 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Rock Paper Scissors Part 2
-  </title>
+  <title>Rock Paper Scissors</title>
 </head>
 
 <body>
 
   <div id="game">
+      <h1>Rock, Paper, Scissors</h1>
+
+      <p>Choose rock, paper or scissors by pressing R, P or S to start the game!</p>
 
   </div>
 
   <script type="text/javascript">
 
-    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    //User needs to make a choice
+    //Computer to make a choice
+    //Compare choices and determine win, loss or tie
+    //Display result on the document
+
     var computerChoices = ["r", "p", "s"];
 
     // This function is run whenever the user presses a key.
     document.onkeyup = function(event) {
-
-      // Determines which key was pressed.
       var userGuess = event.key;
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-      // Alerts the key the user pressed (userGuess).
-      alert("User guess: " + userGuess);
+      if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+        console.log(event.key)
 
-      // Alerts the Computer's guess.
-      alert("Computer guess: " + computerGuess);
 
-    };
+      // // Alerts the key the user pressed (userGuess).
+      alert("You chose " + userGuess.toUpperCase() + "!");
+
+      // // Alerts the Computer's guess.
+      // alert("The computer chose " + computerGuess.toUpperCase() + "!");
+
+      // if (userGuess = computerGuess) {
+      //   alert("You guys tied!");
+      // }
+      
+      // else if (userGuess === "r" && computerGuess === "s");
+      // else {
+      //   document.write("Who won?");
+      }
+
+      else {
+        alert("You need to choose R, P or S!")
+      }
+
+      };
+
   </script>
 
 </body>
